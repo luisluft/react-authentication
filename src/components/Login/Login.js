@@ -31,6 +31,11 @@ const Login = (props) => {
     isValid: false,
   });
 
+  useEffect(() => {
+    console.log("checks form validity");
+    setFormIsValid(emailState.isValid && passwordState.isValid);
+  }, [emailState, passwordState]);
+
   const emailChangeHandler = (event) => {
     dispatchEmail({ type: "USER_INPUT", value: event.target.value });
 
