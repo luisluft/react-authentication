@@ -17,11 +17,14 @@ export const AuthContextProvider = (props) => {
 
   const logoutHandler = () => {
     localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("username");
+
     setIsLoggedIn(false);
   };
 
-  const loginHandler = () => {
+  const loginHandler = (username, password) => {
     localStorage.setItem("isLoggedIn", "1");
+    localStorage.setItem("username", username);
     setIsLoggedIn(true);
   };
 

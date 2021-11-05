@@ -35,8 +35,8 @@ const Login = (props) => {
 
   const authContext = useContext(AuthContext);
 
+  // checks form validity
   useEffect(() => {
-    console.log("checks form validity");
     setFormIsValid(emailState.isValid && passwordState.isValid);
   }, [emailState, passwordState]);
 

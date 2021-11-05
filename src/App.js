@@ -13,7 +13,7 @@ function App() {
       <MainHeader />
       <main>
         {!context.isLoggedIn && <Login />}
-        {context.isLoggedIn && <Home />}
+        {context.isLoggedIn && <Home  />}
       </main>
     </>
   );
